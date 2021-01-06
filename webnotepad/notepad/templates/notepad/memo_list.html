@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block contents%}
+{% for notes in note %}
+<p>
+    {{ notes.title }}
+    {{ notes.content }}
+    {{ notes.registered_dttm }}
+    {% endfor %}
+</p>
+{% endblock %}

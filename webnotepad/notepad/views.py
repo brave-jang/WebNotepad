@@ -20,5 +20,10 @@ def memo_write(request):
         )
 
         note.save()
-        
+
     return render(request, "notepad/memo_write.html")
+
+
+def memo_detail(request, post_id):
+    note = Notepad.objects.get(pk=post_id)
+    return render(request, "notepad/memo_detail.html", {'note':note})

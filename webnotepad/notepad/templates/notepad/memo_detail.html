@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block contents%}
+<p>제목</p>
+{{ note.title }}
+<p>내용</p>
+{{ note.content }}
+<p>등록시간</p>
+{{ note.registered_dttm }}
+
+{% endblock %}
